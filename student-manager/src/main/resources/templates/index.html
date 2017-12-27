@@ -5,6 +5,17 @@
     <title>Title</title>
 </head>
 <body>
- <label th:text="${sss.name}"></label>
+<table>
+    <tr>
+        <th>学生号</th>
+        <th>学生名</th>
+        <th>班级</th>
+    </tr>
+    <tr th:each="student:${students}">
+        <td th:text="${student.id}"></td>
+        <td th:text="${student.name}"></td>
+        <td th:text="${student.sclass}"></td>
+    </tr>
+</table>
 </body>
 </html>

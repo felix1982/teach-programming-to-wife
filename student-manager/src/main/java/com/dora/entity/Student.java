@@ -1,14 +1,18 @@
 package com.dora.entity;
 
-import org.springframework.stereotype.Component;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
 
 /**
  * Created by Administrator on 2017-12-24.
  */
-@Component
+@Entity
 public class Student {
-    private String name;
+    @Id
+    @GeneratedValue
     private String id;
+    private String name;
     private String sclass;
 
     public String getName() {
